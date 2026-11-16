@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
+  <defs>
+    <radialGradient id="ripeBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFF0F5"/>
+      <stop offset="100%" stop-color="#FCE4EC"/>
+    </radialGradient>
+    <radialGradient id="ripeFruit" cx="42%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#FF3385"/>
+      <stop offset="50%" stop-color="#E91E63"/>
+      <stop offset="85%" stop-color="#C2185B"/>
+      <stop offset="100%" stop-color="#880E4F"/>
+    </radialGradient>
+    <linearGradient id="ripeScale" x1="0%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#A7F3D0"/>
+      <stop offset="40%" stop-color="#34D399"/>
+      <stop offset="85%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+    <filter id="fruitShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#C2185B" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="600" fill="url(#ripeBg)"/>
+
+  <!-- Cactus stem on top -->
+  <path d="M290 60 C290 100 295 130 300 160" stroke="#2E7D32" stroke-width="14" stroke-linecap="round" fill="none"/>
+
+  <g filter="url(#fruitShadow)">
+    <!-- Top green crown bracts -->
+    <path d="M300 150 C270 90 230 60 250 40 C280 70 295 110 305 140 Z" fill="url(#ripeScale)"/>
+    <path d="M305 140 C325 80 370 50 350 40 C330 70 315 110 305 140 Z" fill="url(#ripeScale)"/>
+    <path d="M280 160 C230 120 180 110 170 90 C200 120 240 140 275 165 Z" fill="url(#ripeScale)"/>
+    <path d="M320 160 C370 120 420 110 430 90 C400 120 360 140 325 165 Z" fill="url(#ripeScale)"/>
+
+    <!-- Main Ripe Fruit Body (Vibrant Magenta Red) -->
+    <ellipse cx="300" cy="330" rx="140" ry="190" fill="url(#ripeFruit)"/>
+
+    <!-- Prominent curved leafy scales -->
+    <path d="M185 240 C125 220 105 250 120 280 C145 290 180 275 200 260 Z" fill="url(#ripeScale)"/>
+    <path d="M170 340 C95 330 80 370 105 400 C130 410 165 380 190 360 Z" fill="url(#ripeScale)"/>
+    <path d="M195 430 C135 450 120 490 145 520 C175 520 200 480 215 450 Z" fill="url(#ripeScale)"/>
+
+    <path d="M415 240 C475 220 495 250 480 280 C455 290 420 275 400 260 Z" fill="url(#ripeScale)"/>
+    <path d="M430 340 C505 330 520 370 495 400 C470 410 435 380 410 360 Z" fill="url(#ripeScale)"/>
+    <path d="M405 430 C465 450 480 490 455 520 C425 520 400 480 385 450 Z" fill="url(#ripeScale)"/>
+
+    <path d="M255 270 C225 300 235 340 265 345 C280 335 280 300 275 280 Z" fill="url(#ripeScale)"/>
+    <path d="M345 270 C375 300 365 340 335 345 C320 335 320 300 325 280 Z" fill="url(#ripeScale)"/>
+    <path d="M300 360 C275 400 285 440 310 450 C330 440 330 400 320 370 Z" fill="url(#ripeScale)"/>
+    <path d="M250 390 C225 430 235 470 260 475 C275 465 275 430 270 405 Z" fill="url(#ripeScale)"/>
+    <path d="M350 390 C375 430 365 470 340 475 C325 465 325 430 330 405 Z" fill="url(#ripeScale)"/>
+
+    <!-- Shiny gloss highlight -->
+    <ellipse cx="265" cy="270" rx="35" ry="70" fill="#FFFFFF" opacity="0.2" transform="rotate(-15 265 270)"/>
+  </g>
+
+  <!-- Friendly Ribbon Banner on Sample -->
+  <g transform="translate(180, 520)">
+    <rect x="0" y="0" width="240" height="42" rx="21" fill="#E91E63"/>
+    <text x="120" y="27" fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" text-anchor="middle">RIPE DRAGON FRUIT</text>
+  </g>
+</svg>

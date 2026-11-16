@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 260" fill="none" stroke="#A8BCA1" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Sun / Clouds -->
+  <path d="M40 45 C45 35 60 35 68 42 C75 38 88 40 92 48 C96 48 102 52 100 58 C98 62 40 62 40 45Z" fill="#F4F8F3" fill-opacity="0.8"/>
+  <path d="M280 30 C285 22 296 22 302 28 C308 25 318 26 322 32 C326 32 330 35 328 40 C326 44 280 44 280 30Z" fill="#F4F8F3" fill-opacity="0.8"/>
+
+  <!-- Distant rolling hills -->
+  <path d="M0 130 Q90 95 180 120 T380 100" fill="none" stroke="#C5D6BF"/>
+  <path d="M0 150 Q110 120 220 145 T380 125" fill="none" stroke="#B8CBB2"/>
+  
+  <!-- Farmhouse on hill -->
+  <g transform="translate(190, 88) scale(0.85)">
+    <!-- Roof -->
+    <polygon points="30,10 5,30 55,30" fill="#E8EFE5" stroke="#97AC90"/>
+    <!-- Body -->
+    <rect x="10" y="30" width="40" height="30" fill="#F9FBF8" stroke="#97AC90"/>
+    <!-- Door -->
+    <rect x="24" y="42" width="12" height="18" fill="#E2EBE0" stroke="#97AC90"/>
+    <!-- Window -->
+    <rect x="14" y="34" width="8" height="8" fill="#FFFFFF" stroke="#97AC90"/>
+    <rect x="38" y="34" width="8" height="8" fill="#FFFFFF" stroke="#97AC90"/>
+    <!-- Silo / Barn annex -->
+    <rect x="52" y="24" width="16" height="36" rx="4" fill="#F3F7F2" stroke="#97AC90"/>
+    <path d="M52 24 C52 14 68 14 68 24" fill="#E8EFE5" stroke="#97AC90"/>
+    <!-- Fence -->
+    <line x1="72" y1="52" x2="105" y2="52"/>
+    <line x1="78" y1="46" x2="78" y2="60"/>
+    <line x1="88" y1="46" x2="88" y2="60"/>
+    <line x1="98" y1="46" x2="98" y2="60"/>
+  </g>
+
+  <!-- Orchard trees on left -->
+  <g transform="translate(15, 105)">
+    <!-- Tree 1 -->
+    <path d="M45 70 Q46 50 48 40" stroke="#879E80" stroke-width="2.5"/>
+    <path d="M48 40 C35 38 25 25 32 12 C38 0 60 2 64 12 C72 10 80 20 76 30 C72 40 58 42 48 40Z" fill="#EBF4E8" stroke="#879E80" stroke-width="1.8"/>
+    <!-- Fruit dots -->
+    <circle cx="42" cy="22" r="2.5" fill="#E11D60" stroke="none"/>
+    <circle cx="58" cy="18" r="2.5" fill="#E11D60" stroke="none"/>
+    <circle cx="65" cy="30" r="2.5" fill="#E11D60" stroke="none"/>
+    <circle cx="36" cy="32" r="2.5" fill="#E11D60" stroke="none"/>
+  </g>
+
+  <g transform="translate(65, 120) scale(0.85)">
+    <!-- Tree 2 -->
+    <path d="M45 70 Q46 52 48 42" stroke="#879E80" stroke-width="2.5"/>
+    <path d="M48 42 C35 40 25 28 32 15 C38 2 60 5 64 15 C72 12 80 22 76 32 C72 42 58 44 48 42Z" fill="#EBF4E8" stroke="#879E80" stroke-width="1.8"/>
+    <circle cx="44" cy="25" r="2.5" fill="#E11D60" stroke="none"/>
+    <circle cx="60" cy="22" r="2.5" fill="#E11D60" stroke="none"/>
+    <circle cx="52" cy="35" r="2.5" fill="#E11D60" stroke="none"/>
+  </g>
+
+  <!-- Dragon fruit trellis support posts / dragon fruit cactus rows in foreground -->
+  <g stroke="#97AC90">
+    <!-- Contour lines of farm fields -->
+    <path d="M0 190 C120 160 240 185 380 155" stroke-width="1.8"/>
+    <path d="M0 215 C100 185 260 210 380 180" stroke-width="1.8"/>
+    <path d="M0 240 C140 210 250 235 380 205" stroke-width="1.8"/>
+    
+    <!-- Terrace vertical contour hatchings -->
+    <path d="M40 192 L42 205 M70 188 L72 202 M105 184 L108 200 M145 183 L148 200 M190 186 L192 203 M230 188 L232 203 M270 186 L273 200 M310 181 L312 194 M350 173 L352 186" stroke-dasharray="1 3"/>
+    
+    <path d="M25 220 L27 232 M60 216 L62 230 M100 212 L103 227 M150 213 L153 227 M200 217 L203 231 M250 218 L253 230 M300 212 L303 224 M340 202 L343 214" stroke-dasharray="1 3"/>
+  </g>
+
+  <!-- Dragon fruit plants on trellis poles (agricultural detail!) -->
+  <g transform="translate(280, 160) scale(0.9)">
+    <!-- Pole -->
+    <line x1="30" y1="20" x2="30" y2="75" stroke="#7A8E74" stroke-width="3"/>
+    <!-- Top branching dragon fruit cactus arms drooping down -->
+    <path d="M30 20 C18 10 10 25 12 45" stroke="#5E8354" stroke-width="3.5" fill="none"/>
+    <path d="M30 20 C42 10 50 25 48 45" stroke="#5E8354" stroke-width="3.5" fill="none"/>
+    <path d="M30 20 C25 5 35 5 30 20" stroke="#5E8354" stroke-width="3" fill="none"/>
+    <path d="M30 22 C22 25 15 35 20 52" stroke="#5E8354" stroke-width="3" fill="none"/>
+    <path d="M30 22 C38 25 45 35 40 52" stroke="#5E8354" stroke-width="3" fill="none"/>
+    <!-- Dragon fruits hanging -->
+    <ellipse cx="12" cy="46" rx="4" ry="5.5" fill="#E11D60" stroke="#B80E48" stroke-width="1"/>
+    <ellipse cx="48" cy="46" rx="4" ry="5.5" fill="#E11D60" stroke="#B80E48" stroke-width="1"/>
+    <ellipse cx="20" cy="53" rx="3.5" ry="5" fill="#E11D60" stroke="#B80E48" stroke-width="1"/>
+  </g>
+</svg>

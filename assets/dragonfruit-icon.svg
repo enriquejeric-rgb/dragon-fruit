@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="100%" height="100%">
+  <defs>
+    <!-- Aesthetic Rind Gradient -->
+    <radialGradient id="realDfRind" cx="40%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#FF3875"/>
+      <stop offset="45%" stop-color="#E11D48"/>
+      <stop offset="80%" stop-color="#BE123C"/>
+      <stop offset="100%" stop-color="#881337"/>
+    </radialGradient>
+
+    <!-- Scale Green-to-Pink Natural Gradient -->
+    <linearGradient id="realScaleTip" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#BE123C"/>
+      <stop offset="25%" stop-color="#E11D48"/>
+      <stop offset="55%" stop-color="#A3E635"/>
+      <stop offset="85%" stop-color="#4ADE80"/>
+      <stop offset="100%" stop-color="#16A34A"/>
+    </linearGradient>
+
+    <linearGradient id="realScaleLateralL" x1="100%" y1="50%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#BE123C"/>
+      <stop offset="35%" stop-color="#FB7185"/>
+      <stop offset="70%" stop-color="#A3E635"/>
+      <stop offset="100%" stop-color="#22C55E"/>
+    </linearGradient>
+
+    <linearGradient id="realScaleLateralR" x1="0%" y1="50%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#BE123C"/>
+      <stop offset="35%" stop-color="#FB7185"/>
+      <stop offset="70%" stop-color="#A3E635"/>
+      <stop offset="100%" stop-color="#22C55E"/>
+    </linearGradient>
+
+    <linearGradient id="stemGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4D7C0F"/>
+      <stop offset="100%" stop-color="#166534"/>
+    </linearGradient>
+
+    <filter id="cleanShadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#881337" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <!-- Clean, Aesthetic Real Dragon Fruit Silhouette -->
+  <g filter="url(#cleanShadow)">
+    
+    <!-- Top woody cactus stem -->
+    <path d="M76 22 C76 14 83 8 87 5 C89 10 88 17 84 24 Z" fill="url(#stemGrad)"/>
+    
+    <!-- Back crown scales -->
+    <path d="M80 34 C68 18 54 10 58 6 C70 12 78 22 82 32 Z" fill="url(#realScaleTip)"/>
+    <path d="M82 34 C94 18 108 10 104 6 C92 12 84 22 80 32 Z" fill="url(#realScaleTip)"/>
+
+    <!-- Main Fruit Body: Realistic Natural Ovoid Shape -->
+    <path d="M80 32 
+             C112 36 128 68 126 102 
+             C124 130 106 148 80 150 
+             C54 148 36 130 34 102 
+             C32 68 48 36 80 32 Z" 
+          fill="url(#realDfRind)"/>
+
+    <!-- Natural Curving Lateral Leaf Bracts / Scales -->
+    <!-- Left upper scale -->
+    <path d="M42 54 C24 44 14 54 12 60 C24 64 36 64 48 62 Z" fill="url(#realScaleLateralL)"/>
+    <!-- Right upper scale -->
+    <path d="M118 54 C136 44 146 54 148 60 C136 64 124 64 112 62 Z" fill="url(#realScaleLateralR)"/>
+
+    <!-- Left middle scale -->
+    <path d="M35 82 C14 74 6 86 8 94 C20 96 32 94 42 90 Z" fill="url(#realScaleLateralL)"/>
+    <!-- Right middle scale -->
+    <path d="M125 82 C146 74 154 86 152 94 C140 96 128 94 118 90 Z" fill="url(#realScaleLateralR)"/>
+
+    <!-- Left lower scale -->
+    <path d="M40 114 C22 112 18 126 22 134 C34 132 44 126 50 120 Z" fill="url(#realScaleLateralL)"/>
+    <!-- Right lower scale -->
+    <path d="M120 114 C138 112 142 126 138 134 C126 132 116 126 110 120 Z" fill="url(#realScaleLateralR)"/>
+
+    <!-- Center surface scales curving gracefully on front -->
+    <path d="M66 48 C54 62 58 78 72 80 C78 76 76 60 74 50 Z" fill="url(#realScaleLateralL)"/>
+    <path d="M94 48 C106 62 102 78 88 80 C82 76 84 60 86 50 Z" fill="url(#realScaleLateralR)"/>
+    
+    <path d="M78 78 C68 96 74 114 86 116 C92 110 90 94 86 82 Z" fill="url(#realScaleTip)"/>
+
+    <path d="M60 102 C50 118 56 132 68 134 C74 128 72 116 68 106 Z" fill="url(#realScaleLateralL)"/>
+    <path d="M100 102 C110 118 104 132 92 134 C86 128 88 116 92 106 Z" fill="url(#realScaleLateralR)"/>
+
+    <!-- Bottom tip scales -->
+    <path d="M74 146 C76 156 80 158 84 158 C84 152 82 148 78 146 Z" fill="url(#realScaleTip)"/>
+
+    <!-- Soft, aesthetic specular waxy glow highlight on upper left curve -->
+    <path d="M52 50 C44 68 44 94 52 112" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.32"/>
+  </g>
+</svg>

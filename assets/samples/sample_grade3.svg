@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bgLight3" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#4B5563"/>
+      <stop offset="60%" stop-color="#374151"/>
+      <stop offset="100%" stop-color="#1F2937"/>
+    </radialGradient>
+    <radialGradient id="dfPinkGrad3" cx="42%" cy="46%" r="55%">
+      <stop offset="0%" stop-color="#E13572"/>
+      <stop offset="45%" stop-color="#C01655"/>
+      <stop offset="85%" stop-color="#960A3C"/>
+      <stop offset="100%" stop-color="#6B0528"/>
+    </radialGradient>
+    <!-- Wilted brownish-green scales -->
+    <linearGradient id="scaleGreenGrad3" x1="0%" y1="0%" x2="40%" y2="100%">
+      <stop offset="0%" stop-color="#9CA3AF"/>
+      <stop offset="35%" stop-color="#6B7280"/>
+      <stop offset="80%" stop-color="#4B5563"/>
+      <stop offset="100%" stop-color="#374151"/>
+    </linearGradient>
+    <linearGradient id="handGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ECCFB3"/>
+      <stop offset="60%" stop-color="#D9AC89"/>
+      <stop offset="100%" stop-color="#BF8963"/>
+    </linearGradient>
+    <!-- Severe Anthracnose rot gradient -->
+    <radialGradient id="rotGrad1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#110502"/>
+      <stop offset="40%" stop-color="#3A170C"/>
+      <stop offset="70%" stop-color="#733816"/>
+      <stop offset="90%" stop-color="#C01655" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#C01655" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="scabGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#2D1C0F"/>
+      <stop offset="50%" stop-color="#5E371C"/>
+      <stop offset="80%" stop-color="#A16938"/>
+      <stop offset="100%" stop-color="#C01655" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadowFilter3" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="15" stdDeviation="15" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="800" fill="url(#bgLight3)"/>
+
+  <!-- Hand silhouette -->
+  <g fill="url(#handGrad3)" opacity="0.95">
+    <path d="M140 460 C120 420 145 370 170 380 C195 390 200 450 180 490 Z"/>
+    <path d="M120 540 C110 650 130 760 160 800 L320 800 C340 730 350 630 330 550 C260 560 180 570 120 540 Z"/>
+    <path d="M430 400 C465 420 470 460 440 480 C410 490 395 440 415 410 Z"/>
+    <path d="M420 470 C455 490 460 530 430 550 C400 560 385 510 405 480 Z"/>
+    <path d="M400 540 C430 560 435 600 405 615 C380 620 370 580 385 550 Z"/>
+  </g>
+
+  <!-- Dragon fruit main body -->
+  <g filter="url(#shadowFilter3)">
+    <!-- Wilted crown scales -->
+    <path d="M300 210 C270 150 240 100 270 70 C295 110 305 160 310 200 Z" fill="url(#scaleGreenGrad3)"/>
+    <path d="M310 200 C330 140 370 90 340 60 C325 100 315 150 305 200 Z" fill="url(#scaleGreenGrad3)"/>
+    <path d="M290 210 C240 160 190 140 180 120 C210 150 250 180 280 220 Z" fill="url(#scaleGreenGrad3)"/>
+    <path d="M320 210 C370 160 420 140 430 120 C400 150 360 180 330 220 Z" fill="url(#scaleGreenGrad3)"/>
+
+    <ellipse cx="305" cy="420" rx="145" ry="215" fill="url(#dfPinkGrad3)"/>
+
+    <!-- Scales -->
+    <path d="M190 310 C130 290 110 320 125 350 C150 360 185 345 205 330 Z" fill="url(#scaleGreenGrad3)"/>
+    <path d="M175 420 C100 410 85 450 110 480 C135 490 170 460 195 440 Z" fill="url(#scaleGreenGrad3)"/>
+    <path d="M200 520 C140 540 125 580 150 610 C180 610 205 570 220 540 Z" fill="url(#scaleGreenGrad3)"/>
+
+    <path d="M420 310 C480 290 500 320 485 350 C460 360 425 345 405 330 Z" fill="url(#scaleGreenGrad3)"/>
+    <path d="M435 420 C510 410 525 450 500 480 C475 490 440 460 415 440 Z" fill="url(#scaleGreenGrad3)"/>
+    <path d="M410 520 C470 540 485 580 460 610 C430 610 405 570 390 540 Z" fill="url(#scaleGreenGrad3)"/>
+
+    <path d="M260 350 C230 380 240 420 270 425 C285 415 285 380 280 360 Z" fill="url(#scaleGreenGrad3)"/>
+    <path d="M350 350 C380 380 370 420 340 425 C325 415 325 380 330 360 Z" fill="url(#scaleGreenGrad3)"/>
+
+    <!-- DEFECT 1: Severe Anthracnose Rot (large black lesion with rings) -->
+    <ellipse cx="270" cy="360" rx="45" ry="40" fill="url(#rotGrad1)"/>
+    <circle cx="270" cy="360" r="28" fill="#150604"/>
+    <circle cx="270" cy="360" r="14" fill="#0A0201"/>
+    <!-- concentric fungal rings -->
+    <circle cx="270" cy="360" r="38" fill="none" stroke="#D97706" stroke-width="1.5" stroke-dasharray="3 3"/>
+
+    <!-- DEFECT 2: Deep Insect Damage -->
+    <ellipse cx="370" cy="390" rx="28" ry="32" fill="url(#scabGrad)"/>
+    <circle cx="372" cy="388" r="5" fill="#0D0602"/>
+    <circle cx="365" cy="396" r="4" fill="#0D0602"/>
+
+    <!-- DEFECT 3: Sunburn / Large Scab necrosis -->
+    <path d="M230 460 C210 480 215 520 250 540 C280 550 300 520 285 480 C270 450 240 450 230 460 Z" fill="url(#rotGrad1)"/>
+    <ellipse cx="255" cy="495" rx="20" ry="25" fill="#1C0904"/>
+
+    <!-- DEFECT 4: Mechanical scratch / skin split -->
+    <path d="M330 470 Q350 510 340 550" stroke="#150604" stroke-width="6" stroke-linecap="round"/>
+    <path d="M330 470 Q350 510 340 550" stroke="#78350F" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- DEFECT 5: Stem-end decay / Fungal spot -->
+    <ellipse cx="330" cy="270" rx="25" ry="20" fill="url(#rotGrad1)"/>
+    <circle cx="330" cy="270" r="12" fill="#1A0703"/>
+  </g>
+</svg>
