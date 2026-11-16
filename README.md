@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🍓 Dragon Fruit Ripeness Checker
 
 A simple web application designed to check dragon fruit ripeness (**Ripe** vs **Unripe**), connected to your Roboflow dataset: `thanh-long-detection-znzlc-k8knb`.
@@ -46,3 +47,6 @@ When your training finishes:
 
 * **Local Server:** Double-click `start.bat` (opens `http://localhost:3000`).
 * **Direct Browser:** Double-click `open_app.bat` or open `index.html` directly in Chrome, Edge, Safari, or Firefox.
+=======
+# dragon-fruit
+>>>>>>> 35992aa88223ba7b3079c6711fbd626fa5647ce2
