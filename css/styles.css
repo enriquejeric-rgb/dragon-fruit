@@ -334,6 +334,32 @@ body {
   object-fit: cover;
 }
 
+/* Not Dragon Fruit / Warning State */
+.ripeness-status-box.not-fruit {
+  background: #FFF7ED;
+  border: 2px solid #FED7AA;
+}
+
+.ripeness-status-box.not-fruit .ripeness-text-title {
+  color: #C2410C;
+  font-size: 20px;
+}
+
+.ripeness-status-box.not-fruit .ripeness-text-desc {
+  color: #9A3412;
+}
+
+.ripeness-status-box.not-fruit .ripeness-icon-badge {
+  background: #FFFFFF;
+  border: 2.5px solid #EA580C;
+  box-shadow: 0 4px 14px rgba(234, 88, 12, 0.2);
+  padding: 0;
+}
+
+.ripeness-status-box.not-fruit .ripeness-icon-badge img {
+  object-fit: cover;
+}
+
 /* Badge Thumbnail Frame */
 .ripeness-icon-badge {
   width: 68px;
@@ -471,6 +497,12 @@ body {
   background: var(--df-green-light);
   color: var(--df-green-deep);
   border: 1px solid var(--df-green-border);
+}
+
+.badge-not-fruit {
+  background: #FFF7ED;
+  color: #C2410C;
+  border: 1px solid #FED7AA;
 }
 
 /* ==========================================================

@@ -62,7 +62,7 @@ const InspectionHistory = {
       `"${r.id}"`,
       `"${r.timestamp}"`,
       `"${r.title || r.label}"`,
-      `"${r.confidence}%"`,
+      `"${r.confidence > 0 ? r.confidence + '%' : '--'}"`,
       `"${(r.statusNote || '').replace(/"/g, '""')}"`
     ].join(','));
 

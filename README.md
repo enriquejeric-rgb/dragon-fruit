@@ -1,31 +1,34 @@
-<<<<<<< HEAD
 # 🍓 Dragon Fruit Ripeness Checker
 
-A simple web application designed to check dragon fruit ripeness (**Ripe** vs **Unripe**), connected to your Roboflow dataset: `thanh-long-detection-znzlc-k8knb`.
+A simple, aesthetic web application designed to check dragon fruit ripeness (**Ripe** vs **Unripe**) and accurately reject **Non-Dragon-Fruit** photos. Pre-configured to connect directly to your Roboflow dataset: `thanh-long-detection-znzlc-k8knb`.
 
 ---
 
 ## 🌿 How It Works
 
 * **Ripe Dragon Fruit:**
-  * Detected by rich red/pink skin coloration.
-  * Marked with a pink box labeled `Ripe (95%)`.
+  * Detected by rich magenta/red/pink skin with green bract tips.
+  * Card turns soft pink with `RIPE` status and bounding box.
   * Recommendation: Ready for harvest and fresh consumption.
 
 * **Unripe Dragon Fruit:**
   * Detected by predominantly green skin and scales.
-  * Marked with a green box labeled `Unripe (92%)`.
+  * Card turns soft green with `UNRIPE` status and bounding box.
   * Recommendation: Leave on the vine to mature.
+
+* **Non-Dragon-Fruit Protection:**
+  * If an uploaded photo is NOT a dragon fruit (e.g. human face, room, desk, car, pet, white document, or other objects), the detector rejects it.
+  * Card turns warm amber with **`NOT DRAGON FRUIT`** status.
+  * Recommendation: Prompts the user to scan or upload a clear photo of a dragon fruit.
 
 ---
 
 ## 🎨 Clean & Aesthetic Dragon Fruit Design
 
-* **Realistic Dragon Fruit Header Logo:** Clean, aesthetic vector illustration of a real dragon fruit with natural pink-to-lime scales, waxy specular highlights, and cactus stem.
-* **Custom Ripe & Unripe Badge Logos:** Dedicated, beautifully styled dragon fruit badges for **RIPE** (rose badge with mature red/pink fruit) and **UNRIPE** (sage mint badge with young green/lime fruit).
-* **No Sci-Fi / AI Tropes:** Simple, warm, and natural feel without neon reticles, cybernetic overlays, or tech jargon.
-* **Warm Dragon Fruit Theme:** Natural pitaya colors: dragon fruit pink (`#E91E63`, `#C2185B`) and vine green (`#2E7D32`), with friendly typography (`Plus Jakarta Sans` & `Comfortaa`).
-* **Direct Workflow:** Single clean screen with photo/camera input on the left, instant ripeness result card on the right, and recent scan logs below.
+* **Mascot Web Logo:** 3D aesthetic character dragon fruit logo in the header and browser favicon.
+* **Actual Photo Display:** Ripeness Result card displays the actual uploaded or scanned photo in the preview thumbnail.
+* **Ready State:** On initial load or after clicking **Clear / Reset**, the result card shows a neutral **`READY TO CHECK`** state.
+* **Warm Dragon Fruit Theme:** Natural pitaya colors: dragon fruit pink (`#E91E63`, `#C2185B`) and vine green (`#2E7D32`), with friendly typography (`Plus Jakarta Sans`).
 
 ---
 
@@ -46,7 +49,4 @@ When your training finishes:
 ## 🚀 How to Run
 
 * **Local Server:** Double-click `start.bat` (opens `http://localhost:3000`).
-* **Direct Browser:** Double-click `open_app.bat` or open `index.html` directly in Chrome, Edge, Safari, or Firefox.
-=======
-# dragon-fruit
->>>>>>> 35992aa88223ba7b3079c6711fbd626fa5647ce2
+* **Direct Browser:** Double-click `open_app.bat` or open `index.html` directly in your browser.

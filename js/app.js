@@ -262,28 +262,43 @@ const App = {
     const actualImageSrc = snapshotUrl || (this.currentEvaluation && this.currentEvaluation.imageSnapshot) || 'assets/logo.png';
     if (statusImg) {
       statusImg.src = actualImageSrc;
-      statusImg.alt = report.isRipe ? 'Scanned Ripe Dragon Fruit' : 'Scanned Unripe Dragon Fruit';
+      statusImg.alt = report.isDragonFruit 
+        ? (report.isRipe ? 'Scanned Ripe Dragon Fruit' : 'Scanned Unripe Dragon Fruit')
+        : 'Non-Dragon Fruit Image';
     }
 
-    if (report.isRipe) {
+    if (!report.isDragonFruit) {
+      container.className = 'ripeness-status-box not-fruit';
+      titleEl.textContent = 'NOT DRAGON FRUIT';
+      descEl.textContent = 'No dragon fruit was recognized in this photo. Please upload or scan a clear photo of a dragon fruit.';
+      document.getElementById('detailStatusVal').textContent = 'Not Dragon Fruit';
+      document.getElementById('detailConfidenceVal').textContent = '--';
+      document.getElementById('detailSkinVal').textContent = 'Unrecognized';
+      const harvestEl = document.getElementById('detailHarvestVal');
+      harvestEl.textContent = 'Please scan a dragon fruit';
+      harvestEl.style.color = '#C2410C';
+    } else if (report.isRipe) {
       container.className = 'ripeness-status-box ripe';
       titleEl.textContent = 'RIPE';
       descEl.textContent = 'Fully matured dragon fruit with rich red/pink skin. Flesh is sweet and ready to eat!';
       document.getElementById('detailStatusVal').textContent = 'Ripe';
+      document.getElementById('detailConfidenceVal').textContent = `${report.confidence}%`;
       document.getElementById('detailSkinVal').textContent = 'Red / Pink';
-      document.getElementById('detailHarvestVal').textContent = 'Ready to harvest and eat';
-      document.getElementById('detailHarvestVal').style.color = '#C2185B';
+      const harvestEl = document.getElementById('detailHarvestVal');
+      harvestEl.textContent = 'Ready to harvest and eat';
+      harvestEl.style.color = '#C2185B';
     } else {
       container.className = 'ripeness-status-box unripe';
       titleEl.textContent = 'UNRIPE';
       descEl.textContent = 'Young fruit with predominantly green skin and scales. Still maturing on the vine.';
       document.getElementById('detailStatusVal').textContent = 'Unripe';
+      document.getElementById('detailConfidenceVal').textContent = `${report.confidence}%`;
       document.getElementById('detailSkinVal').textContent = 'Green / Yellow-Green';
-      document.getElementById('detailHarvestVal').textContent = 'Leave on vine to mature';
-      document.getElementById('detailHarvestVal').style.color = '#2E7D32';
+      const harvestEl = document.getElementById('detailHarvestVal');
+      harvestEl.textContent = 'Leave on vine to mature';
+      harvestEl.style.color = '#2E7D32';
     }
 
-    document.getElementById('detailConfidenceVal').textContent = `${report.confidence}%`;
     document.getElementById('resultTimestamp').textContent = `Checked at ${new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`;
   },
 
@@ -296,6 +311,7 @@ const App = {
     const { ripenessReport, imageSnapshot } = this.currentEvaluation;
 
     const record = {
+      isDragonFruit: ripenessReport.isDragonFruit,
       isRipe: ripenessReport.isRipe,
       label: ripenessReport.label,
       title: ripenessReport.title,
@@ -330,19 +346,25 @@ const App = {
 
     list.forEach(item => {
       const tr = document.createElement('tr');
-      const badgeClass = item.isRipe ? 'badge-ripe' : 'badge-unripe';
+      let badgeClass = 'badge-not-fruit';
+      if (item.isDragonFruit !== false) {
+        badgeClass = item.isRipe ? 'badge-ripe' : 'badge-unripe';
+      }
 
-      const fallbackIcon = item.isRipe ? 'assets/icon-ripe.svg' : 'assets/icon-unripe.svg';
       const thumbHtml = item.thumbnail
         ? `<img src="${item.thumbnail}" class="table-fruit-thumb" alt="Fruit">`
-        : `<img src="${fallbackIcon}" class="table-fruit-thumb" style="padding: 4px; background: #FAF7F5; object-fit: contain;" alt="Fruit">`;
+        : `<img src="assets/logo.png" class="table-fruit-thumb" style="padding: 4px; background: #FAF7F5; object-fit: contain;" alt="Fruit">`;
+
+      const confText = (item.isDragonFruit !== false && item.confidence > 0)
+        ? `<strong>${item.confidence}%</strong>`
+        : '<span style="color: var(--text-muted);">--</span>';
 
       tr.innerHTML = `
         <td>${thumbHtml}</td>
         <td><strong>${item.id}</strong></td>
         <td><span style="color: var(--text-muted); font-size: 12px;">${item.timestamp}</span></td>
         <td><span class="badge-pill ${badgeClass}">${item.title || (item.isRipe ? 'RIPE' : 'UNRIPE')}</span></td>
-        <td><strong>${item.confidence}%</strong></td>
+        <td>${confText}</td>
         <td style="max-width: 340px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
           ${item.statusNote || ''}
         </td>
